@@ -9,7 +9,7 @@
                 <div invisible="company_type != 'person' or not individual_code">
                     <h1 class="mt0 mb0">
                         <span style="color: #666;">EMR # </span>
-                        <field name="individual_code" class="oe_inline"/>
+                        <field name="individual_code" class="oe_inline" readonly="1"/>
                     </h1>
                 </div>
             </xpath>

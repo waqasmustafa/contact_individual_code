@@ -6,7 +6,6 @@ class ResPartner(models.Model):
 
     individual_code = fields.Char(
         string="EMR #",
-        readonly=True,
         copy=False,
         index=True,
     )
