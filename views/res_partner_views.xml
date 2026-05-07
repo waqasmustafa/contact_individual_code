@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_individual_code" model="ir.ui.view">
+        <field name="name">res.partner.form.individual.code</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <div invisible="company_type != 'person' or not individual_code">
+                    <h1 class="mt0 mb0">
+                        <span style="color: #666;">EMR # </span>
+                        <field name="individual_code" class="oe_inline"/>
+                    </h1>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
